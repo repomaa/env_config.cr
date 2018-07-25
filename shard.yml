@@ -1,0 +1,9 @@
+name: env_config
+version: 0.1.0
+
+authors:
+  - Joakim Reinert <mail@jreinert.com>
+
+crystal: 0.25.0
+
+license: MIT
