@@ -42,6 +42,8 @@ module EnvConfig
               value
             {% elsif options[:type] == Bool %}
               value !~ /^false$/i && value != "0"
+            {% elsif options[:type] < ::Enum %}
+              {{options[:type]}}.parse(value)
             {% else %}
               ::Union({{ options[:type] }}).new(value)
             {% end %}
